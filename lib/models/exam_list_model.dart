@@ -1,8 +1,4 @@
-// To parse this JSON data, do
-//
-//     final examlListModel = examlListModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 ExamlListModel examlListModelFromJson(String str) => ExamlListModel.fromJson(json.decode(str));

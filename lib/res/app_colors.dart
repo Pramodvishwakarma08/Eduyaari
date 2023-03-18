@@ -3,9 +3,12 @@ import 'package:flutter/services.dart';
 
 extension mycolor on ColorScheme{
 
-  static const Color primary = Color(0xff973dff);
+  static const Color primary = Color(0xff1679e6);
   static const Color primary2 = Color(0xfff0edfe);
-  static const Color primary3 = Color(0xfffefefe);
+
+  static const Color white = Colors.white;
+
+  static const Color white2 = Color(0xfffefefe);
 
 
 

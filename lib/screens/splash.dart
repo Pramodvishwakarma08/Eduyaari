@@ -1,9 +1,8 @@
 import 'package:eduyaari02/screens/auth/login_screen.dart';
 import 'package:eduyaari02/screens/dashboard_page.dart';
-import 'package:eduyaari02/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 
 class SplashScreen extends StatefulWidget {
 
@@ -20,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(
-        const Duration(seconds: 5),
+        const Duration(milliseconds: 3),
             () => Get.to(LoginScreen()));
        }
 
@@ -28,9 +27,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-
         alignment: Alignment.center,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white
             // gradient: mainGradient(context)
         ),

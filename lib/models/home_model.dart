@@ -2,7 +2,6 @@
 //
 //     final homeModel = homeModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 HomeModel homeModelFromJson(String str) => HomeModel.fromJson(json.decode(str));

@@ -1,24 +1,13 @@
-import 'package:eduyaari02/controllers/home_controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:eduyaari02/screens/instruction_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../controllers/exam_list_controller.dart';
-import '../controllers/exam_list_controller.dart';
 import '../res/app_colors.dart';
-import 'demo.dart';
 
 class ExamlistSCreen extends StatelessWidget {
   ExamlistSCreen({Key? key}) : super(key: key);
 
   ExamlistController examlistController = Get.put(ExamlistController());
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-
-  go(BuildContext context ,String title){
-    Navigator.push(context, MaterialPageRoute(builder: (_)=>Demo(title: title,)));
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +33,7 @@ class ExamlistSCreen extends StatelessWidget {
                     onTap: (){
                       // var name= examlistController.homeModel!.data[index].name;
                       // go(context, name);
+                      Get.to(InstructinScreen());
                     },
                     child: Card(
                       child: Padding(

@@ -26,6 +26,6 @@ class LightTheme with SubThemeData {
             style: getElavatedButtonTheme()),
         cardColor: cardColorLT,
         colorScheme: ColorScheme.fromSwatch(
-            accentColor: kPrimayColorLT, primarySwatch: Colors.purple));
+            accentColor: kPrimayColorLT, primarySwatch: Colors.blue));
   }
 }

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../res/app_colors.dart';
-import 'demo.dart';
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({Key? key}) : super(key: key);
@@ -13,18 +12,13 @@ class HomeScreen extends StatelessWidget {
 
    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-
-   go(BuildContext context ,String title){
-     Navigator.push(context, MaterialPageRoute(builder: (_)=>ExamlistSCreen()));
-   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mycolor.primary2,
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: mycolor.primary,
         leading: Container(),
         // backgroundColor: Colors.transparent,
       ),
@@ -41,7 +35,7 @@ class HomeScreen extends StatelessWidget {
             child: GridView.builder(
               shrinkWrap: true,
               padding: EdgeInsets.all(12.h),
-              itemCount: 8,
+              itemCount: homeController.homeModel!.data.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               itemBuilder: (context, index) {
                 return InkWell(

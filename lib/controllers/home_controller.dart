@@ -24,7 +24,7 @@ class HomeController extends GetxController {
       final response = await http.post(Uri.parse(AppUrl.home_elements), body: {"app_hash": apphashcode},);
       if(response.statusCode==200){
         var result =jsonDecode(response.body);
-         print(result.toString());
+         // print(result.toString());
          homeModel  =HomeModel.fromJson(result);
       }else{print("erro feching data");}
       } catch (e) {

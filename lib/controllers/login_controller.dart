@@ -32,11 +32,10 @@ class LoginController extends GetxController {
       if (login == 1) {
         emailController.value.clear();
         passwordController.value.clear();
-        Get.to(() => LandingPage());
+        Get.off(() => LandingPage());
         loading.value = false;
         Get.snackbar("Login successful ", "Login successful",
             backgroundColor: mycolor.primary
-
         );
       } else {
         loading.value = false;

@@ -8,13 +8,17 @@ import '../../res/app_colors.dart';
 import '../../res/app_icons_icons.dart';
 import '../../res/custom_text_styles.dart';
 
-class LoginScreen extends StatelessWidget {
-   LoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+   const LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
 
+class _LoginScreenState extends State<LoginScreen> {
   LoginController loginController = Get.put(LoginController());
-  var isLogin = false.obs;
 
+  var isLogin = false.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +74,9 @@ class LoginScreen extends StatelessWidget {
                   Row(
                     children: [
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+
+                          },
                           child: const Text(
                             "Forgot Password?",
                             style: ktext16p,
@@ -85,8 +91,8 @@ class LoginScreen extends StatelessWidget {
               ),
 
               Obx(
-                () => GestureDetector(
-                  onTap: () {
+                () => TextButton(
+                  onPressed: () {
                     loginController.loginWithtemail();
                   },
                   child: loginController.loading.value
@@ -130,7 +136,8 @@ class LoginScreen extends StatelessWidget {
                       },
                       child: const Text(
                         "Register Now",
-                        style: TextStyle(fontSize: 14)
+
+                        style: TextStyle(fontSize: 14,color: mycolor.primary)
                       ))
                 ],
               )

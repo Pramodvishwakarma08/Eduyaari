@@ -1,9 +1,9 @@
+import 'package:eduyaari02/screens/instruction_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/common/dashboard_controller.dart';
 import '../res/app_colors.dart';
-import '../viewdemo/first_page.dart';
 import 'home_screen.dart';
 
 class LandingPage extends StatelessWidget {
@@ -93,9 +93,9 @@ class LandingPage extends StatelessWidget {
             children: [
               // HomePage(),
               HomeScreen(),
-              FirstPage(),
-              Container(color: Colors.green, height: 200,width: 200, ),
-              Container(color: Colors.pink, height: 200,width: 200,  ),
+              Container(),
+              Container(),
+              Container(),
             ],
           )),
         ));
